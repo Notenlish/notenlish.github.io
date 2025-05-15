@@ -1,0 +1,161 @@
+/* Taken From: https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* CUSTOM STUFF: */
+
+h1,h2,h3,h4,h5,h6 {
+  padding-block: 1rem;
+}
+a {
+  color: oklch(70.8% 0 0);
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  display: block;
+  color: oklch(70.8% 0 0);
+  width: max-content;
+  width: fit-content;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: oklch(92.8% 0.006 264.531);
+}
+
+.firacode-1 {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  padding: 5rem 10rem;
+  background-color: #1a1a26;
+  min-height: 100vh;
+  color: oklch(92.8% 0.006 264.531);
+}
+/*
+oklch(70.8% 0 0)
+oklch(70.7% 0.022 261.325)
+*/
+main .top {
+  display: flex;
+  gap: 2rem;
+  justify-content: left;
+  align-items: center;
+}
+main .top img {
+  border-radius: 100%;
+  width: 7rem;
+  height: 7rem;
+  border: solid oklch(70.8% 0 0);
+  z-index: 1;
+}
+main .relative .top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 100vw;
+  height: 2px;
+  transform: translate(-10rem, 3.5rem);
+}
+main .relative .top h1 {
+  transform: translate(0, -1.5rem);
+}
+.relative {
+  position: relative;
+}
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+.projects .project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.4rem;
+  border-radius: 6px;
+  border: white solid 1.1px;
+}
+.projects .project img {
+    border-radius: 6px;
+}
