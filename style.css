@@ -77,7 +77,12 @@ h6 {
 
 /* CUSTOM STUFF: */
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding-block: 1rem;
 }
 a {
@@ -157,5 +162,5 @@ main .relative .top h1 {
   border: white solid 1.1px;
 }
 .projects .project img {
-    border-radius: 6px;
+  border-radius: 6px;
 }
